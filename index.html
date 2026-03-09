@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人生の主導権診断 - あなたは今、自分の人生の主役ですか？</title>
+    <meta name="description" content="たった15問で、あなたの自分軸度がわかります。自分軸と他人軸のスペクトラムで人生の主導権を診断します。">
+    <meta property="og:title" content="人生の主導権診断">
+    <meta property="og:description" content="たった15問で、あなたの自分軸度がわかります">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630?text=人生の主導権診断">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- ===== トップセクション ===== -->
+        <section id="topSection" class="section visible">
+            <div class="hero">
+                <div class="hero-content">
+                    <h1 class="hero-title">あなたは今、<br>自分の人生の主役ですか？</h1>
+                    <p class="hero-subtitle">たった15問で、あなたの自分軸度がわかります</p>
+                    <p class="hero-description">
+                        自分軸と他人軸のスペクトラムから、<br>
+                        現在のあなたの人生の主導権の持ち方が見えてきます。
+                    </p>
+                    <button id="startBtn" class="btn btn-primary btn-lg">今すぐ診断する（無料）</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== 質問セクション ===== -->
+        <section id="quizSection" class="section">
+            <div class="quiz-container">
+                <!-- プログレスバー -->
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+                <p class="progress-text"><span id="currentQuestion">1</span> / 15</p>
+
+                <!-- 質問 -->
+                <div class="question-block">
+                    <h2 id="questionText" class="question-title"></h2>
+                </div>
+
+                <!-- 選択肢 -->
+                <div class="options-block">
+                    <div class="scale-labels">
+                        <span class="label-left">全く当てはまらない</span>
+                        <span class="label-right">非常に当てはまる</span>
+                    </div>
+                    <div class="radio-group" id="optionsContainer"></div>
+                </div>
+
+                <!-- ナビゲーション -->
+                <div class="quiz-navigation">
+                    <button id="prevBtn" class="btn btn-secondary">前へ</button>
+                    <button id="nextBtn" class="btn btn-primary">次へ</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== 結果セクション ===== -->
+        <section id="resultSection" class="section">
+            <div class="result-container">
+                <!-- 結果タイプアイコン -->
+                <div id="resultIcon" class="result-icon"></div>
+
+                <!-- 結果タイプ名 -->
+                <h2 id="resultType" class="result-type"></h2>
+
+                <!-- スコアメーター -->
+                <div class="score-meter">
+                    <div class="score-bar">
+                        <div id="scoreProgress" class="score-progress"></div>
+                    </div>
+                    <p class="score-text">
+                        あなたの主導権スコア：<span id="scoreValue">0</span> / 75点
+                    </p>
+                </div>
+
+                <!-- メッセージ -->
+                <div class="message-box">
+                    <p id="resultMessage" class="result-message"></p>
+                </div>
+
+                <!-- アクション提案 -->
+                <div class="actions-box">
+                    <h3>今すぐできるアクション</h3>
+                    <ul id="actionsList" class="actions-list"></ul>
+                </div>
+
+                <!-- CTA: メルマガ登録 -->
+                <div class="cta-box">
+                    <h3>さらに深く「自分軸」について学ぶ</h3>
+                    <p id="ctaText" class="cta-description"></p>
+                    <a id="ctaButton" href="#" target="_blank" class="btn btn-primary btn-lg cta-btn">
+                        自分軸を育てるメール講座に登録（無料）
+                    </a>
+                </div>
+
+                <!-- シェアボタン -->
+                <div class="share-box">
+                    <p class="share-text">この診断をシェアして、友人に勧めよう</p>
+                    <div class="share-buttons">
+                        <button id="shareTwitter" class="btn btn-share btn-twitter">
+                            𝕏（Twitter）でシェア
+                        </button>
+                        <button id="shareLineBtn" class="btn btn-share btn-line">
+                            LINEでシェア
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 再診断 -->
+                <button id="restartBtn" class="btn btn-secondary btn-lg">診断をやり直す</button>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
